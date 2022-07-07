@@ -26,8 +26,8 @@ import os
 
 def folderM(name):
   try:
-    if not os.path.exists(f'../{name}'):  # 상위 폴더에 만들기
-      os.makedirs(f'../{name}') # 이미 있으면 실패함 
+    if not os.path.exists(f'./{name}'):  #  ../ 상위 폴더에 만들기
+      os.makedirs(f'./{name}') # 이미 있으면 실패함 
   except OSError:
     print('폴더 생성에 실패했습니다.')
     
@@ -212,7 +212,7 @@ while(i<1):
   # print(obj['disks'][0]['S.M.A.R.T.'][0])
   
   # output data
-  with open(f"../JSON/{title}Paser.json","w") as f:
+  with open(f"./JSON/{title}Paser.json","w") as f:
     f.write(json.dumps(obj, indent=2, separators=(",", ": "), sort_keys=True))
     
 
